@@ -11,6 +11,10 @@
 		7424B2362BB552E000610F34 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7424B2352BB552E000610F34 /* ContentView.swift */; };
 		7424B2382BB552E400610F34 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7424B2372BB552E400610F34 /* Assets.xcassets */; };
 		7424B23B2BB552E400610F34 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7424B23A2BB552E400610F34 /* Preview Assets.xcassets */; };
+		7424B2422BB5571300610F34 /* ScrollViewPractice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7424B2412BB5571300610F34 /* ScrollViewPractice.swift */; };
+		7424B2442BB5594000610F34 /* NavigationPracticeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7424B2432BB5594000610F34 /* NavigationPracticeView.swift */; };
+		7424B2462BB562BD00610F34 /* DecodingJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7424B2452BB562BD00610F34 /* DecodingJSON.swift */; };
+		7424B2482BB564E400610F34 /* GridViewPractice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7424B2472BB564E400610F34 /* GridViewPractice.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +23,10 @@
 		7424B2352BB552E000610F34 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		7424B2372BB552E400610F34 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7424B23A2BB552E400610F34 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		7424B2412BB5571300610F34 /* ScrollViewPractice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrollViewPractice.swift; sourceTree = "<group>"; };
+		7424B2432BB5594000610F34 /* NavigationPracticeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationPracticeView.swift; sourceTree = "<group>"; };
+		7424B2452BB562BD00610F34 /* DecodingJSON.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DecodingJSON.swift; sourceTree = "<group>"; };
+		7424B2472BB564E400610F34 /* GridViewPractice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GridViewPractice.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,6 +59,10 @@
 		7424B2322BB552E000610F34 /* SwiftUI-Moonshot */ = {
 			isa = PBXGroup;
 			children = (
+				7424B2432BB5594000610F34 /* NavigationPracticeView.swift */,
+				7424B2452BB562BD00610F34 /* DecodingJSON.swift */,
+				7424B2472BB564E400610F34 /* GridViewPractice.swift */,
+				7424B2412BB5571300610F34 /* ScrollViewPractice.swift */,
 				7424B2332BB552E000610F34 /* SwiftUI_MoonshotApp.swift */,
 				7424B2352BB552E000610F34 /* ContentView.swift */,
 				7424B2372BB552E400610F34 /* Assets.xcassets */,
@@ -138,7 +150,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				7424B2362BB552E000610F34 /* ContentView.swift in Sources */,
+				7424B2442BB5594000610F34 /* NavigationPracticeView.swift in Sources */,
 				7424B2342BB552E000610F34 /* SwiftUI_MoonshotApp.swift in Sources */,
+				7424B2482BB564E400610F34 /* GridViewPractice.swift in Sources */,
+				7424B2422BB5571300610F34 /* ScrollViewPractice.swift in Sources */,
+				7424B2462BB562BD00610F34 /* DecodingJSON.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
