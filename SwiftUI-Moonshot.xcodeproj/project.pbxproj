@@ -15,6 +15,11 @@
 		7424B2442BB5594000610F34 /* NavigationPracticeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7424B2432BB5594000610F34 /* NavigationPracticeView.swift */; };
 		7424B2462BB562BD00610F34 /* DecodingJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7424B2452BB562BD00610F34 /* DecodingJSON.swift */; };
 		7424B2482BB564E400610F34 /* GridViewPractice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7424B2472BB564E400610F34 /* GridViewPractice.swift */; };
+		74328C162BB6536E00B11FB5 /* ImageScaling.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74328C152BB6536E00B11FB5 /* ImageScaling.swift */; };
+		74328C192BB653AB00B11FB5 /* astronauts.json in Resources */ = {isa = PBXBuildFile; fileRef = 74328C172BB653AB00B11FB5 /* astronauts.json */; };
+		74328C1A2BB653AB00B11FB5 /* missions.json in Resources */ = {isa = PBXBuildFile; fileRef = 74328C182BB653AB00B11FB5 /* missions.json */; };
+		74328C1C2BB653CA00B11FB5 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74328C1B2BB653CA00B11FB5 /* Model.swift */; };
+		74328C1E2BB653E600B11FB5 /* Bundle+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74328C1D2BB653E600B11FB5 /* Bundle+Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,6 +32,11 @@
 		7424B2432BB5594000610F34 /* NavigationPracticeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationPracticeView.swift; sourceTree = "<group>"; };
 		7424B2452BB562BD00610F34 /* DecodingJSON.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DecodingJSON.swift; sourceTree = "<group>"; };
 		7424B2472BB564E400610F34 /* GridViewPractice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GridViewPractice.swift; sourceTree = "<group>"; };
+		74328C152BB6536E00B11FB5 /* ImageScaling.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageScaling.swift; sourceTree = "<group>"; };
+		74328C172BB653AB00B11FB5 /* astronauts.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = astronauts.json; sourceTree = "<group>"; };
+		74328C182BB653AB00B11FB5 /* missions.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = missions.json; sourceTree = "<group>"; };
+		74328C1B2BB653CA00B11FB5 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
+		74328C1D2BB653E600B11FB5 /* Bundle+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Bundle+Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -43,6 +53,8 @@
 		7424B2272BB552E000610F34 = {
 			isa = PBXGroup;
 			children = (
+				74328C1D2BB653E600B11FB5 /* Bundle+Extension.swift */,
+				74328C1B2BB653CA00B11FB5 /* Model.swift */,
 				7424B2322BB552E000610F34 /* SwiftUI-Moonshot */,
 				7424B2312BB552E000610F34 /* Products */,
 			);
@@ -64,8 +76,11 @@
 				7424B2472BB564E400610F34 /* GridViewPractice.swift */,
 				7424B2412BB5571300610F34 /* ScrollViewPractice.swift */,
 				7424B2332BB552E000610F34 /* SwiftUI_MoonshotApp.swift */,
+				74328C152BB6536E00B11FB5 /* ImageScaling.swift */,
 				7424B2352BB552E000610F34 /* ContentView.swift */,
 				7424B2372BB552E400610F34 /* Assets.xcassets */,
+				74328C172BB653AB00B11FB5 /* astronauts.json */,
+				74328C182BB653AB00B11FB5 /* missions.json */,
 				7424B2392BB552E400610F34 /* Preview Content */,
 			);
 			path = "SwiftUI-Moonshot";
@@ -137,7 +152,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				74328C192BB653AB00B11FB5 /* astronauts.json in Resources */,
 				7424B23B2BB552E400610F34 /* Preview Assets.xcassets in Resources */,
+				74328C1A2BB653AB00B11FB5 /* missions.json in Resources */,
 				7424B2382BB552E400610F34 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -150,7 +167,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				7424B2362BB552E000610F34 /* ContentView.swift in Sources */,
+				74328C1E2BB653E600B11FB5 /* Bundle+Extension.swift in Sources */,
 				7424B2442BB5594000610F34 /* NavigationPracticeView.swift in Sources */,
+				74328C162BB6536E00B11FB5 /* ImageScaling.swift in Sources */,
+				74328C1C2BB653CA00B11FB5 /* Model.swift in Sources */,
 				7424B2342BB552E000610F34 /* SwiftUI_MoonshotApp.swift in Sources */,
 				7424B2482BB564E400610F34 /* GridViewPractice.swift in Sources */,
 				7424B2422BB5571300610F34 /* ScrollViewPractice.swift in Sources */,
