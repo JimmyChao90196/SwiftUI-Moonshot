@@ -6,10 +6,15 @@
 //
 
 import Foundation
+import SwiftUI
 
 extension Bundle {
     
     func decode<T: Codable>(filename: String) -> T {
+        
+        let formatter = DateFormatter()
+        formatter.dateFormat = "y-MM-dd"
+        
         guard let url = self.url(forResource: filename, withExtension: "json") else {
             fatalError("Couldn't locate the file")
         }
@@ -18,11 +23,22 @@ extension Bundle {
             fatalError("Couldn't load the file")
         }
         
-        guard let responce = try? JSONDecoder().decode(T.self, from: data) else{
+        let decoder = JSONDecoder()
+        decoder.dateDecodingStrategy = .formatted(formatter)
+        guard let responce = try? decoder.decode(T.self, from: data) else{
             fatalError("Couldn't decode the file")
         }
         
         return responce
     }
+}
+
+extension ShapeStyle where Self == Color {
+    static var darkBG: Color {
+        Color(red: 0.1, green: 0.1, blue: 0.2)
+    }
     
+    static var lightBG: Color {
+        Color(red: 0.2, green: 0.2, blue: 0.3)
+    }
 }

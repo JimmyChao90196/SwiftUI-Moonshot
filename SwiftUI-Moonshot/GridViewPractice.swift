@@ -10,7 +10,7 @@ import SwiftUI
 struct GridViewPractice: View {
     
     let layout = [
-        //GridItem(.adaptive(minimum: 80, maximum: 80))
+        
         GridItem(.adaptive(minimum: 70, maximum: 80), alignment: .center)
     ]
     

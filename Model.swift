@@ -15,13 +15,26 @@ struct Astronaut: Codable, Identifiable {
 
 struct Mission: Codable, Identifiable {
     
+    var displayName: String {
+        "Apollo \(self.id)"
+    }
+    
+    var image: String {
+        "apollo\(self.id)"
+    }
+    
+    var formattedLaunchDate: String {
+        return launchDate?.formatted(date: .abbreviated, time: .omitted) ?? "N/A"
+    }
+    
     struct CrewRole: Codable {
         var name: String
         var role: String
     }
     
     var id: Int
-    var launchDate: String?
+    var launchDate: Date?
     var crew: [CrewRole]
     var description: String
+    
 }
