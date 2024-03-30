@@ -11,7 +11,7 @@ import SwiftUI
 struct SwiftUI_MoonshotApp: App {
     var body: some Scene {
         WindowGroup {
-            DecodingJSON()
+            ContentView()
         }
     }
 }
