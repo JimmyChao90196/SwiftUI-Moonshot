@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import SwiftUI
 
 struct CrewMember {
     let role : String
@@ -20,6 +21,12 @@ struct Astronaut: Codable, Identifiable {
 
 struct Mission: Codable, Identifiable {
     
+    private var dateFormatter: DateFormatter {
+        let formatter = DateFormatter()
+        formatter.dateFormat = "MM/dd/yyyy"
+        return formatter
+    }
+    
     var displayName: String {
         "Apollo \(self.id)"
     }
@@ -30,6 +37,10 @@ struct Mission: Codable, Identifiable {
     
     var formattedLaunchDate: String {
         return launchDate?.formatted(date: .abbreviated, time: .omitted) ?? "N/A"
+    }
+    
+    var formattedLaunchDateB: String {
+        dateFormatter.string(from: launchDate ?? Date())
     }
     
     struct CrewRole: Codable {

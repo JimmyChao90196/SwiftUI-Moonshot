@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		74041E632BC5783800EB458E /* HScrolligView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74041E622BC5783800EB458E /* HScrolligView.swift */; };
 		7424B2342BB552E000610F34 /* SwiftUI_MoonshotApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7424B2332BB552E000610F34 /* SwiftUI_MoonshotApp.swift */; };
 		7424B2362BB552E000610F34 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7424B2352BB552E000610F34 /* ContentView.swift */; };
 		7424B2382BB552E400610F34 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7424B2372BB552E400610F34 /* Assets.xcassets */; };
@@ -25,6 +26,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		74041E622BC5783800EB458E /* HScrolligView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HScrolligView.swift; sourceTree = "<group>"; };
 		7424B2302BB552E000610F34 /* SwiftUI-Moonshot.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "SwiftUI-Moonshot.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7424B2332BB552E000610F34 /* SwiftUI_MoonshotApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUI_MoonshotApp.swift; sourceTree = "<group>"; };
 		7424B2352BB552E000610F34 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -88,6 +90,7 @@
 				74328C172BB653AB00B11FB5 /* astronauts.json */,
 				74328C182BB653AB00B11FB5 /* missions.json */,
 				7424B2392BB552E400610F34 /* Preview Content */,
+				74041E622BC5783800EB458E /* HScrolligView.swift */,
 			);
 			path = "SwiftUI-Moonshot";
 			sourceTree = "<group>";
@@ -176,6 +179,7 @@
 				74328C1E2BB653E600B11FB5 /* Bundle+Extension.swift in Sources */,
 				7424B2442BB5594000610F34 /* NavigationPracticeView.swift in Sources */,
 				74328C162BB6536E00B11FB5 /* ImageScaling.swift in Sources */,
+				74041E632BC5783800EB458E /* HScrolligView.swift in Sources */,
 				74328C1C2BB653CA00B11FB5 /* Model.swift in Sources */,
 				7424B2342BB552E000610F34 /* SwiftUI_MoonshotApp.swift in Sources */,
 				744892342BB84F7000BF09EE /* AstronautView.swift in Sources */,

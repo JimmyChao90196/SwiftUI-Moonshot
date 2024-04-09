@@ -38,7 +38,7 @@ struct MissionView: View {
                         .foregroundStyle(.lightBG)
                         .padding(.vertical)
                     
-                    Text("Mission Highlight")
+                    Text("Mission Highlight - \(mission.formattedLaunchDateB)")
                         .font(.headline.bold())
                         .padding(.bottom, 5)
                     
@@ -56,34 +56,7 @@ struct MissionView: View {
                 .padding(.horizontal)
                 .foregroundStyle(.white)
                 
-                ScrollView(.horizontal, showsIndicators: false) {
-                    HStack {
-                        ForEach(crewsMembers, id: \.role) { crewMember in
-                            NavigationLink {
-                                AstronautView(astronaut: crewMember.astronaut)
-                            } label: {
-                                HStack {
-                                    Image(crewMember.astronaut.id)
-                                        .resizable()
-                                        .scaledToFit()
-                                        .frame(width: 110, height: 72)
-                                        .clipShape(.capsule)
-                                        .overlay {
-                                            Capsule().strokeBorder(.black, lineWidth: 2.5)
-                                        }
-                                    
-                                    VStack {
-                                        Text("\(crewMember.astronaut.name)")
-                                            .font(.headline)
-                                            .foregroundStyle(.white)
-                                        Text("\(crewMember.role)")
-                                            .foregroundStyle(.white.opacity(0.5))
-                                    }
-                                }.padding(.horizontal)
-                            }
-                        }
-                    }
-                }.padding(.vertical)
+                HScrolligView(crewsMembers: crewsMembers)
                 
             }
             .padding(.bottom)
