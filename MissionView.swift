@@ -9,11 +9,12 @@ import SwiftUI
 
 struct MissionView: View {
     
+    @Binding var path: NavigationPath
     let mission: Mission
-    
     let crewsMembers: [CrewMember]
     
-    init(mission: Mission, astronauts: [String: Astronaut]) {
+    init(path: Binding<NavigationPath>, mission: Mission, astronauts: [String: Astronaut]) {
+        self._path = path
         self.mission = mission
         self.crewsMembers = mission.crew.map { member in
             guard let astronaut = astronauts[member.name] else { fatalError("Missing Member")}
@@ -56,8 +57,7 @@ struct MissionView: View {
                 .padding(.horizontal)
                 .foregroundStyle(.white)
                 
-                HScrolligView(crewsMembers: crewsMembers)
-                
+                HScrolligView(crewsMembers: crewsMembers, path: $path)
             }
             .padding(.bottom)
         }
@@ -67,10 +67,10 @@ struct MissionView: View {
     }
 }
 
-#Preview {
-    let missions: [Mission] = Bundle.main.decode(filename: "missions")
-    let astronauts: [String: Astronaut] = Bundle.main.decode(filename: "astronauts")
-    return MissionView(mission: missions[0], astronauts: astronauts)
-        .preferredColorScheme(.dark)
-}
+//#Preview {
+//    let missions: [Mission] = Bundle.main.decode(filename: "missions")
+//    let astronauts: [String: Astronaut] = Bundle.main.decode(filename: "astronauts")
+//    return MissionView(mission: missions[0], astronauts: astronauts)
+//        .preferredColorScheme(.dark)
+//}
 

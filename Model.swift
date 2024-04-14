@@ -8,18 +8,34 @@
 import Foundation
 import SwiftUI
 
-struct CrewMember {
+struct CrewMember: Hashable {
+    static func == (lhs: CrewMember, rhs: CrewMember) -> Bool {
+        lhs.astronaut == rhs.astronaut
+    }
+    
+    func hash(into hasher: inout Hasher) {
+        hasher.combine(astronaut)
+    }
+    
     let role : String
     let astronaut: Astronaut
 }
 
-struct Astronaut: Codable, Identifiable {
+struct Astronaut: Codable, Identifiable, Hashable {
     var id: String
     var name: String
     var description: String
 }
 
-struct Mission: Codable, Identifiable {
+struct Mission: Codable, Identifiable, Hashable {
+    
+    static func == (lhs: Mission, rhs: Mission) -> Bool {
+        return lhs.id == rhs.id
+    }
+    
+    func hash(into hasher: inout Hasher) {
+        hasher.combine(id)
+    }
     
     private var dateFormatter: DateFormatter {
         let formatter = DateFormatter()

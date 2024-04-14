@@ -10,6 +10,8 @@ import Foundation
 
 struct ContentView: View {
     
+    @State var path: NavigationPath = NavigationPath()
+    
     let astronauts: [String: Astronaut] = Bundle.main.decode(filename: "astronauts")
     let missions: [Mission] = Bundle.main.decode(filename: "missions")
     let columns = [
@@ -22,33 +24,33 @@ struct ContentView: View {
     
     @ViewBuilder var missionGridView: some View {
         ForEach(missions) { mission in
-            NavigationLink {
-                MissionView(mission: mission, astronauts: astronauts)
-            } label: {
+            
+            VStack {
+                Image(mission.image)
+                    .resizable()
+                    .scaledToFit()
+                    .frame(width: 100, height: 100)
+                    .padding()
+                
                 VStack {
-                    Image(mission.image)
-                        .resizable()
-                        .scaledToFit()
-                        .frame(width: 100, height: 100)
-                        .padding()
-                    
-                    VStack {
-                        Text("\(mission.displayName)")
-                            .font(.headline)
-                            .foregroundStyle(.white)
-                        Text(mission.formattedLaunchDate)
-                            .font(.caption)
-                            .foregroundStyle(.white.opacity(0.5))
-                    }
-                    .frame(maxWidth: .infinity)
-                    .padding(.vertical)
-                    .background(.lightBG)
+                    Text("\(mission.displayName)")
+                        .font(.headline)
+                        .foregroundStyle(.white)
+                    Text(mission.formattedLaunchDate)
+                        .font(.caption)
+                        .foregroundStyle(.white.opacity(0.5))
                 }
-                .clipShape(.rect(cornerRadius: 10))
-                .overlay {
-                    RoundedRectangle(cornerRadius: 10)
-                        .stroke(.lightBG, lineWidth: 2, antialiased: false)
-                }
+                .frame(maxWidth: .infinity)
+                .padding(.vertical)
+                .background(.lightBG)
+            }
+            .onTapGesture {
+                path.append(mission)
+            }
+            .clipShape(.rect(cornerRadius: 10))
+            .overlay {
+                RoundedRectangle(cornerRadius: 10)
+                    .stroke(.lightBG, lineWidth: 2, antialiased: false)
             }
         }
     }
@@ -56,7 +58,7 @@ struct ContentView: View {
     @ViewBuilder var missionListView: some View {
         ForEach(missions) { mission in
             NavigationLink {
-                MissionView(mission: mission, astronauts: astronauts)
+                MissionView(path: $path, mission: mission, astronauts: astronauts)
             } label: {
                 HStack {
                     Image(mission.image)
@@ -87,35 +89,16 @@ struct ContentView: View {
     }
     
     var body: some View {
-        NavigationStack {
+        NavigationStack(path: $path) {
             
-            VStack {
-                if isGrid {
-                    ScrollView {
-                        LazyVGrid(columns: columns) {
-                            missionGridView
-                        }
-                        .padding([.bottom, .horizontal])
-                    }.transition(.slide)
-
-                } else {
-                    
-                    List {
-                        missionListView
-                        .listRowBackground(Color.clear)
-                        .listRowInsets(.init(
-                            top: 0,
-                            leading: 0,
-                            bottom: 0,
-                            trailing: 0))
-                        .padding(.horizontal)
-                        .padding(.vertical, 5)
-                    }
-                    .listStyle(PlainListStyle())
-                    .scrollContentBackground(.hidden)
-                    .transition(.slide)
-                    
+            ScrollView {
+                LazyVGrid(columns: columns) {
+                    missionGridView
                 }
+                .padding([.bottom, .horizontal])
+            }
+            .navigationDestination(for: Mission.self) { mission in
+                MissionView(path: $path, mission: mission, astronauts: astronauts)
             }
             .navigationTitle("Moonshot")
             .preferredColorScheme(.dark)
